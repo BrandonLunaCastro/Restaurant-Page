@@ -1,3 +1,5 @@
 export default function Menu(){
-    console.log("menu section")
+   const p = document.createElement("p")
+    p.innerText = "cambiaste a menu "
+    return p
 }
