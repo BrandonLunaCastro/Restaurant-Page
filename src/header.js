@@ -1,21 +1,19 @@
 export const Header = () =>{
     const header = document.createElement("header"),
-    div = document.createElement("div"),
-    h1 = document.createElement("h1");
-
-    h1.innerText = "Healthy food"
-    h1.classList.add('text-lg')
-    h1.classList.add("text-blue-600")
+    div = document.createElement("div")
+  
+    div.className = "backdrop-filter backdrop-blur-md sticky top-0 bg-emerald-500/75 h-30 flex justify-around items-center  shadow-xl text-cyan-950 "
     header.innerHTML = `
         <nav>
-            <ul>
-                <li><a>HOME</a></li>
-                <li><a>ABOUT US</a></li>
-                <li><a>CONTACT</a></li>
+            <h1 class="text-5xl my-3 text-center">Healthy food</h1>
+            <ul class="flex text-lg " >
+                <li class="pr-7 text-3xl cursor-pointer "><a href="#">HOME</a></li>
+                <li class="pr-7 text-3xl cursor-pointer "><a href="#">MENU</a></li>
+                <li class="pr-7 text-3xl cursor-pointer "><a href="#">CONTACT</a></li>
             </ul>
         </nav>
     `;
-    div.appendChild(h1);
+    header.className = ""
     div.appendChild(header);
 
     return div
