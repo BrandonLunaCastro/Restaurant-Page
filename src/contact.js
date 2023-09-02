@@ -1,3 +1,5 @@
 export default function Contact(){
-    console.log("esta es la seccion de contacto")
+   const p = document.createElement('p')
+   p.innerText = 'esta es la seccion de contacto'
+   return p
 }

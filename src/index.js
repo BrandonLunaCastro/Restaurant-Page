@@ -1,26 +1,34 @@
 import "./style.css";
 import Home from "./home.js";
 import Footer from "./footer.js";
-import { Header as header } from "./header.js";
 import Menu from "./menu.js";
-   
-    const content = document.getElementById("content")
-    document.body.className = "bg-lime-50 text-sky-950 h-screen ";
-    
-    const changeSection = (e) => {
-        content.innerHTML = ""
-        e.target.matches(".menu") ? content.appendChild(Menu()) : false
-    }
+import Contact from "./contact.js";
+import { Header as header } from "./header.js";
 
-    const initPage = () => {
-        
-        document.body.insertBefore(header(),content)
-        content.appendChild(Home());
-        document.body.appendChild(Footer());
+const content = document.getElementById("content");
+document.body.className = "flex flex-col bg-lime-50 text-sky-950 h-screen ";
+content.className = "flex flex-auto items-center justify-center";
 
-        document.querySelector(".sections").addEventListener("click",changeSection);
-    }
+const changeSection = (e) => {
+  content.innerHTML = "";
+  if (e.target.matches(".menu")) {
+    content.appendChild(Menu());
+  }
+  if (e.target.matches(".home")) {
+    content.appendChild(Home());
+  }
+  if (e.target.matches(".contact")) {
+    content.appendChild(Contact());
+  }
+};
 
-window.addEventListener("DOMContentLoaded",initPage)
+const initPage = () => {
+  document.body.insertBefore(header(), content);
+  //content.appendChild(Home());
+  content.appendChild(Menu());
+  document.body.appendChild(Footer());
 
+  document.querySelector(".sections").addEventListener("click", changeSection);
+};
 
+window.addEventListener("DOMContentLoaded", initPage);
