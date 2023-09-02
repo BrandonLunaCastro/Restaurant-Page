@@ -6,7 +6,7 @@ import Contact from "./contact.js";
 import { Header as header } from "./header.js";
 
 const content = document.getElementById("content");
-document.body.className = "flex flex-col bg-lime-50 text-sky-950 h-screen ";
+document.body.className = "flex flex-col bg-lime-50 text-sky-950 h-full";
 content.className = "flex flex-auto items-center justify-center";
 
 const changeSection = (e) => {
@@ -24,8 +24,7 @@ const changeSection = (e) => {
 
 const initPage = () => {
   document.body.insertBefore(header(), content);
-  //content.appendChild(Home());
-  content.appendChild(Menu());
+  content.appendChild(Home());
   document.body.appendChild(Footer());
 
   document.querySelector(".sections").addEventListener("click", changeSection);

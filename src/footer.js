@@ -3,7 +3,7 @@ export default function Footer(){
 
     footer.className = "flex gap-4 h-20 items-center justify-center bg-emerald-500/75"
     footer.innerHTML = `
-    <p class="font-bold text-xl" >Design by Brandon Luna 2023</p>
+    <p class="font-dancing font-bold text-2xl" >Design by Brandon Luna 2023</p>
     <a
       href="https://github.com/BrandonLunaCastro"
       rel="noopener"
