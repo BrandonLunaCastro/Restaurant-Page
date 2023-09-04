@@ -6,7 +6,7 @@ import Contact from "./contact.js";
 import { Header as header } from "./header.js";
 
 const content = document.getElementById("content");
-document.body.className = "flex flex-col bg-lime-50 text-sky-950 h-full";
+document.body.className = "flex flex-col bg-lime-50 text-sky-950 h-screen";
 content.className = "flex flex-auto items-center justify-center";
 
 const changeSection = (e) => {

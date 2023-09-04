@@ -5,7 +5,7 @@ export default function Home() {
   div.innerHTML = `
     <h2 class="text-3xl p-8" >Why is important for us eating healthy?</h2>
     <article class="flex items-center gap-3 pb-9">
-     <img src=${image} alt="chef" class="w-1/2 h-96 object-fill  mx-5 rounded-xl shadow-lg">
+     <img src=${image} alt="chef" class="w-80 h-95 object-fill mx-5 rounded-md shadow-lg">
      <div>
        <h4 class="text-2xl font-bold">The benefits of healthy diet</h4>
        <ul class="my-9">
